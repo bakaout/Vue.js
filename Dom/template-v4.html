@@ -1,0 +1,23 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<div id="app">
+    <p>
+        {{ titulo }}
+    </p>
+    <a v-bind:href="link" target="_blank">bakafps</a>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            titulo: 'Usando VueJs',
+            link: 'http://twitch.tv/bakafps'
+        },
+        methods: {
+            saudacao: function(){
+                return 'Boa semana!'
+            }
+        }//V-BIND:HREF ---- o v-bind cria uma propriedade que faz a conexão do Vue com algum elemento html, tendo assim acesso(o Vue) ao valor dentro da tag/elemento e verificando a referencia com algum atributo/var encontrador no Vue 
+    })
+</script>

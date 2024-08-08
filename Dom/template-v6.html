@@ -1,0 +1,23 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<div id="app">
+    <p v-once>{{ titulo }}</p>
+    <p v-html="linkHTML"></p>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            titulo: 'Usando VueJs',
+            link: 'http://twitch.tv/bakafps',
+            linkHTML: '<a href="http://twitch.tv/bakafps">linkHTMLtwitch</a>'
+        },
+        methods: {
+            saudacao: function(){
+                this.titulo = 'Bom dia!'
+                return this.titulo
+            }
+        }//V-HTML ---- Com isso, você consegue colocar código html para um elemento usando um atributo, isso é bom para a segurança da pagina.
+    })
+</script>
